@@ -7,17 +7,15 @@ if(isset($_POST['user_create']))
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $date = date('d-m-y');
     $role = $_POST['role'];
-    $status = "Pending";
     
     $image = $_FILES['image']['name'];
     $temp_image = $_FILES['image']['tmp_name'];
     move_uploaded_file($temp_image, "../images/$image");
     
     
-    $query = "INSERT INTO users(user_firstname, user_lastname, user_username, user_email, user_password, user_date, user_role, user_status, user_image) ";
-    $query .= "VALUES('{$first_name}','{$last_name}', '{$username}', '{$email}', '{$password}', now(), '{$role}', '{$status}', '{$image}')";
+    $query = "INSERT INTO users(user_firstname, user_lastname, user_username, user_email, user_password,  user_role, user_status, user_image) ";
+    $query .= "VALUES('{$first_name}','{$last_name}', '{$username}', '{$email}', '{$password}', now(), '{$role}', '{$image}')";
     
     $add_user_query = mysqli_query($connection, $query);
     

@@ -7,8 +7,6 @@
             <th>Username</th>
             <th>Email</th>
             <th>Role</th>
-            <th>Status</th>
-            <th>Date</th>
             <th>Approve</th>
             <th>Reject</th>
             <th>Delete</th>
@@ -33,9 +31,7 @@
             $user_lastname = $row['user_lastname'];
             $user_email = $row['user_email'];
             $user_username = $row['user_username'];
-            $user_date = $row['user_date'];
             $user_role = $row['user_role'];
-            $user_status = $row['user_status'];
 
             echo "<tr>";
                 echo "<td>{$user_id}</td>";
@@ -44,8 +40,6 @@
                 echo "<td>{$user_username}</td>";
                 echo "<td>{$user_email}</td>";
                 echo "<td>{$user_role}</td>";
-                echo "<td>{$user_status}</td>";
-                echo "<td>{$user_date}</td>";
                 echo "<td><a href='users.php?source=approve_user&id={$user_id}'>Approve</a></td>";
                 echo "<td><a href='users.php?source=reject_user&id={$user_id}'>Reject</a></td>";
                 echo "<td><a href='./users.php?source=delete_user&id={$user_id}'>Delete</a></td>";
