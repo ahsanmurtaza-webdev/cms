@@ -34,7 +34,7 @@
                     
                     if(isset($_SESSION['username'])) {
                         
-                        echo "<li><a href='Admin'>Admin</a></li>";
+                        echo "<li><a href='admin/index.php'>Admin</a></li>";
                         
                         if(isset($_GET['p_id'])) {
                             
