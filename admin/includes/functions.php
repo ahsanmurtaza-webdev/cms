@@ -172,8 +172,13 @@ function add_post() {
     $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) VALUES({$post_category_id}, '{$post_title}', '{$post_author}',  now() , '{$post_image}', '{$post_description}', '{$post_tags}', '{$post_comment_count}', '{$post_status}' ) ";
     
     $post_query = mysqli_query($connection, $query);
+
     
     query_error($post_query);
+
+    $p_id = mysqli_insert_id($connection);
+
+    echo "<p class='bg-success'>Post Created. <a href='../post.php?p_id={$p_id}'>View Post</a> or <a href='./posts.php'>Edit More Posts</a>";
     }
 }
 

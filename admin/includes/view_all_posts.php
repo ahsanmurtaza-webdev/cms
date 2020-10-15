@@ -104,7 +104,7 @@ if(isset($_POST['checkBoxArray'])) {
                 echo "<td>{$post_author}</td>";
                 echo "<td>{$post_title}</td>";
                 echo "<td>{$post_category}</td>";
-                echo "<td><img width='100' src='../images/$post_image' alt='image'></td>";
+                echo "<td><a href='../post.php?p_id={$post_id}'><img width='100' src='../images/$post_image' alt='image'></a></td>";
                 echo "<td>{$post_tags}</td>";
                 echo "<td>{$post_comments}</td>";
                 echo "<td>{$post_date}</td>";

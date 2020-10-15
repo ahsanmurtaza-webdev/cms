@@ -24,7 +24,7 @@ if(isset($_POST['submit'])) {
         $db_user_id = $row['user_id'];
     }
     
-    if($username === $db_username && $password === $db_password) {
+    if($username === $db_username && $password === $db_password && $db_role === "admin") {
         
         $_SESSION['username'] = $db_username;
         $_SESSION['firstname'] = $db_firstname;
@@ -32,7 +32,7 @@ if(isset($_POST['submit'])) {
         $_SESSION['user_role'] = $db_role;
         $_SESSION['user_id'] = $db_user_id;
         
-        header("Location: ../Admin");
+        header("Location: ../admin/index.php");
     }
     
     else {

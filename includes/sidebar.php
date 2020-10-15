@@ -70,6 +70,6 @@
                     <!-- /.row -->
                 </div>
 
-              <?php include"widget.php"; ?>
+              <?php // include"widget.php"; ?>
 
             </div>

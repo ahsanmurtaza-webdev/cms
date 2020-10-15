@@ -81,17 +81,9 @@
         $comment_date = date('d-m-y');
         $comment_status = "Pending";
         
-        if(empty($comment_author)) {
+        if(empty($comment_author) && empty($comment_email) && empty($comment)) {
             
-            echo"<h1>Author Field Cannot be empty!";
-        }
-        else if(empty($comment_email)) {
-            
-            echo "<h1>Email field cannot be empty!</h1>";
-        }
-        else if(empty($comment)) {
-            
-            echo "<h1>Comment field cannot be empty</h1>";
+            echo"<script>alert('Fields cannot be empty!')</script>";
         }
         else {
             
