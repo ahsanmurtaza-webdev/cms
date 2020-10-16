@@ -69,6 +69,7 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <?php include"includes/sidebar.php" ?>
+            
 
         </div>
         <!-- /.row -->
